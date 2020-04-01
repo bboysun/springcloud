@@ -1,0 +1,17 @@
+# application port
+server:
+  port: 7777
+# eureka properties
+eureka:
+  # prefer ip is better
+  instance:
+    prefer-ip-address: true
+    ip-address: 192.168.0.104
+  # as eureka server, the application dont need fetch registry
+  client:
+    fetch-registry: false
+    register-with-eureka: false
+# spring properties
+spring:
+  application:
+    name: eureka-server-A
