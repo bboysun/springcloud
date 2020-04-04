@@ -1,5 +1,6 @@
 package com.darryl.consumer_app.remote;
 
+import com.darryl.consumer_app.remote.fallback.RemoteSayHelloFallBack;
 import com.darryl.model.UserModel;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestBody;
  * /hello/{name} is full uri path
  * @Date: created in 2020/4/1 21:16
  */
-@FeignClient("PRODUCER-A")
+@FeignClient(value = "PRODUCER-A", fallback = RemoteSayHelloFallBack.class)
 public interface RemoteSayHelloService {
     @GetMapping(value = "/hello/{name}")
     String remoteSayHello(@PathVariable("name") String name);
