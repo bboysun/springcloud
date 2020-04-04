@@ -1,11 +1,9 @@
 package com.darryl.producer_app.controller;
 
+import com.darryl.model.UserModel;
 import com.darryl.producer_app.business.SayHelloService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @Auther: Darryl
@@ -22,5 +20,10 @@ public class SayHelloController {
     @GetMapping(value = "/{name}")
     public String say(@PathVariable String name){
         return sayHelloService.sayHello(name);
+    }
+
+    @PostMapping(value = "/userSay")
+    public String userSay(@RequestBody UserModel user) {
+        return sayHelloService.userSayHello(user);
     }
 }

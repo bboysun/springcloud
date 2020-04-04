@@ -1,5 +1,7 @@
 package com.darryl.producer_app.business;
 
+import com.darryl.model.UserModel;
+
 /**
  * @Auther: Darryl
  * @Description: say hello service interface
@@ -7,4 +9,6 @@ package com.darryl.producer_app.business;
  */
 public interface SayHelloService {
     String sayHello(String name);
+
+    String userSayHello(UserModel user);
 }

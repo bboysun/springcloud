@@ -11,6 +11,7 @@
         <module>eureka-server</module>
         <module>producer-app</module>
         <module>consumer-app</module>
+        <module>common</module>
     </modules>
     <packaging>pom</packaging>
     <!--spring boot version and spring cloud version need match-->

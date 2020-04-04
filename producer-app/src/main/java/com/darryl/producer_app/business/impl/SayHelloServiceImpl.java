@@ -1,5 +1,6 @@
 package com.darryl.producer_app.business.impl;
 
+import com.darryl.model.UserModel;
 import com.darryl.producer_app.business.SayHelloService;
 import org.springframework.stereotype.Service;
 
@@ -13,5 +14,10 @@ public class SayHelloServiceImpl implements SayHelloService {
     @Override
     public String sayHello(String name) {
         return name + " say HELLO to you~~~";
+    }
+
+    @Override
+    public String userSayHello(UserModel user) {
+        return user.getName() + " is " + user.getAge() + " say Hello to you~~~";
     }
 }
