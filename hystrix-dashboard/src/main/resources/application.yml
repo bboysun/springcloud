@@ -1,19 +1,14 @@
-# application port
 server:
-  port: 7878
-# eureka properties
+  port: 9898
 eureka:
   instance:
     prefer-ip-address: true
-    # your ip address
     ip-address: 11.241.8.133
-  # producer application registry into eureka server
   client:
     fetch-registry: true
     register-with-eureka: true
     service-url:
       defaultZone: http://${eureka.instance.ip-address}:7777/eureka
-# spring properties
 spring:
   application:
-    name: producer-A
+    name: hystrix-dashboard

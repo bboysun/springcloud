@@ -3,6 +3,7 @@ package com.darryl.consumer_app.controller;
 import com.darryl.consumer_app.remote.RemoteSayHelloService;
 import com.darryl.model.UserModel;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
 
 /**

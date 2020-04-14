@@ -12,6 +12,7 @@
         <module>producer-app</module>
         <module>consumer-app</module>
         <module>common</module>
+        <module>hystrix-dashboard</module>
     </modules>
     <packaging>pom</packaging>
     <!--spring boot version and spring cloud version need match-->
@@ -53,6 +54,24 @@
                 <groupId>com.netflix.hystrix</groupId>
                 <artifactId>hystrix-javanica</artifactId>
                 <version>1.5.12</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-actuator -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-actuator</artifactId>
+                <version>2.2.0.RELEASE</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-netflix-hystrix -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+                <version>2.2.0.RELEASE</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-netflix-hystrix-dashboard -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-netflix-hystrix-dashboard</artifactId>
+                <version>2.2.0.RELEASE</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

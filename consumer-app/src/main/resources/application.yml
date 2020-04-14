@@ -1,17 +1,31 @@
+# application port
 server:
   port: 8888
+# eureka properties
 eureka:
   instance:
     prefer-ip-address: true
-    ip-address: 192.168.0.104
+    ip-address: 11.241.8.133
   client:
     fetch-registry: true
     register-with-eureka: true
     service-url:
       defaultZone: http://${eureka.instance.ip-address}:7777/eureka
+# spring properties
 spring:
   application:
     name: consumer-A
+# feign enable hystrix
 feign:
   hystrix:
     enabled: true
+# add hyxtrix monitor
+management:
+  endpoints:
+    web:
+      exposure:
+        include: ["hystrix.stream"]
+  endpoint:
+    hystrix:
+      stream:
+        enabled: true
