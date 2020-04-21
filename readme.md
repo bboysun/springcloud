@@ -6,4 +6,6 @@
 * Thirdly, hytrix component can help us to protect our application from some exception. So our project can run when some bad things occur.
 * Fourthly, hytrix component also can monitor our application running status. 
   It can count successful calling, lost cases and so on. And we can build a dashboard to monitor application easily.
+* Fifthly, zuul component uses as gateway module to help our project receiving requests. It's unified entrance. Zuul
+  can easily manage requests.
 * to be continue...
