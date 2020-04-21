@@ -6,7 +6,7 @@ eureka:
   # prefer ip is better
   instance:
     prefer-ip-address: true
-    ip-address: 192.168.0.104
+    ip-address: 127.0.0.1
   # as eureka server, the application dont need fetch registry
   client:
     fetch-registry: false

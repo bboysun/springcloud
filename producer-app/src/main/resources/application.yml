@@ -6,7 +6,7 @@ eureka:
   instance:
     prefer-ip-address: true
     # your ip address
-    ip-address: 11.241.8.133
+    ip-address: 127.0.0.1
   # producer application registry into eureka server
   client:
     fetch-registry: true

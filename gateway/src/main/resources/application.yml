@@ -1,31 +1,23 @@
 # application port
 server:
-  port: 8888
+  port: 9999
 # eureka properties
 eureka:
   instance:
     prefer-ip-address: true
     ip-address: 127.0.0.1
   client:
-    fetch-registry: true
     register-with-eureka: true
+    fetch-registry: true
     service-url:
       defaultZone: http://${eureka.instance.ip-address}:7777/eureka
-# spring properties
+# application name
 spring:
   application:
-    name: consumer-A
-# feign enable hystrix
-feign:
-  hystrix:
-    enabled: true
-# add hyxtrix monitor
+    name: gateway-zuul
 management:
   endpoints:
     web:
       exposure:
-        include: ["hystrix.stream"]
-  endpoint:
-    hystrix:
-      stream:
-        enabled: true
+        include: "*" #注意这里*要加引号，暴露全部，也可以只暴露相应endpoint
+#
