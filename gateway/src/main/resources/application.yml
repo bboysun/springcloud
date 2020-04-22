@@ -15,9 +15,14 @@ eureka:
 spring:
   application:
     name: gateway-zuul
+# actor
 management:
   endpoints:
     web:
       exposure:
         include: "*" #注意这里*要加引号，暴露全部，也可以只暴露相应endpoint
-#
+# route info
+zuul:
+  ignored-services: '*'
+  routes:
+    producer-a: /p1/**
