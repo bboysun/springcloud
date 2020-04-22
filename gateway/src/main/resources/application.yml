@@ -15,7 +15,7 @@ eureka:
 spring:
   application:
     name: gateway-zuul
-# actor
+# actuator exposure endpoints
 management:
   endpoints:
     web:
