@@ -15,6 +15,16 @@ eureka:
 spring:
   application:
     name: consumer-A
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: localhost:9092
+          zk-nodes: localhost:2181
+          auto-create-topics: true
+      bindings:
+        consumerSink:
+          destination: stream-demo
 # feign enable hystrix
 feign:
   hystrix:

@@ -2,6 +2,7 @@ package com.darryl.producer_app.controller;
 
 import com.darryl.model.UserModel;
 import com.darryl.producer_app.business.SayHelloService;
+import com.darryl.producer_app.kafka.KafkaSender;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,6 +17,8 @@ public class SayHelloController {
 
     @Autowired
     private SayHelloService sayHelloService;
+    @Autowired
+    private KafkaSender kafkaSender;
 
     @GetMapping(value = "/{name}")
     public String say(@PathVariable String name){
@@ -25,5 +28,10 @@ public class SayHelloController {
     @PostMapping(value = "/userSay")
     public String userSay(@RequestBody UserModel user) {
         return sayHelloService.userSayHello(user);
+    }
+
+    @GetMapping(value = "/streamSender")
+    public void streamSender(String msg){
+        kafkaSender.sendMsg(msg);
     }
 }

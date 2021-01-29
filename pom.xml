@@ -26,6 +26,18 @@
 
     <dependencyManagement>
         <dependencies>
+            <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-stream -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-stream</artifactId>
+                <version>3.0.7.RELEASE</version>
+            </dependency>
+            <!--spring cloud stream kafka-->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-stream-kafka</artifactId>
+                <version>3.0.7.RELEASE</version>
+            </dependency>
             <!--eureka server-->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>

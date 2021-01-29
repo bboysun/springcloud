@@ -17,3 +17,14 @@ eureka:
 spring:
   application:
     name: producer-A
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: 127.0.0.1:9092
+          zk-nodes: 127.0.0.1:2181
+          auto-create-topics: true
+      bindings:
+        producerSource:
+          destination: stream-demo    #消息发往的目的地
+          content-type: text/plain    #消息发送的格式，接收端不用指定格式，但是发送端要
