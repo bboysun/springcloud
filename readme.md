@@ -8,4 +8,5 @@
   It can count successful calling, lost cases and so on. And we can build a dashboard to monitor application easily.
 * Fifthly, zuul component uses as gateway module to help our project receiving requests. It's unified entrance. Zuul
   can easily manage requests.
+* Sixthly，spring cloud stream can help us to access message queue middleware quickly and safely.
 * to be continue...
