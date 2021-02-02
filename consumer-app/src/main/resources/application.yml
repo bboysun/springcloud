@@ -19,8 +19,8 @@ spring:
     stream:
       kafka:
         binder:
-          brokers: localhost:9092
-          zk-nodes: localhost:2181
+          brokers: 127.0.0.1:9092
+          zk-nodes: 127.0.0.1:2181
           auto-create-topics: true
       bindings:
         consumerSink:

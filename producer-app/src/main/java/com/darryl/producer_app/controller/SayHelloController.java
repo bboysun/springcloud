@@ -31,7 +31,8 @@ public class SayHelloController {
     }
 
     @GetMapping(value = "/streamSender")
-    public void streamSender(String msg){
+    public String streamSender(String msg){
         kafkaSender.sendMsg(msg);
+        return "OK";
     }
 }
