@@ -7,7 +7,7 @@ import org.springframework.cloud.stream.annotation.StreamListener;
 
 /**
  * @Author: darrylsun
- * @Description: kafka consumer
+ * @Description: kafka consumer，订阅消息
  * @Date: 2021/01/29
  */
 @EnableBinding(ConsumerSink.class)

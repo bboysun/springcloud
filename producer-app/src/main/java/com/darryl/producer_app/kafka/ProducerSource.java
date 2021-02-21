@@ -5,7 +5,7 @@ import org.springframework.messaging.MessageChannel;
 
 /**
  * @Author: darrylsun
- * @Description: producer app source
+ * @Description: kafka output channel
  * @Date: 2021/01/29
  */
 public interface ProducerSource {

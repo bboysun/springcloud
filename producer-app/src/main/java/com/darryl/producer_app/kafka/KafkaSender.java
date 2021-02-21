@@ -6,7 +6,7 @@ import org.springframework.messaging.support.MessageBuilder;
 
 /**
  * @Author: darrylsun
- * @Description: kafka sender
+ * @Description: kafka producer 发布消息
  * @Date: 2021/01/29
  */
 @EnableBinding(ProducerSource.class)

@@ -5,7 +5,7 @@ import org.springframework.messaging.SubscribableChannel;
 
 /**
  * @Author: darrylsun
- * @Description: kafka消费者
+ * @Description: kafka inputs channel
  * @Date: 2021/01/29
  */
 public interface ConsumerSink {
