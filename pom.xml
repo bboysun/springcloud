@@ -26,7 +26,7 @@
 
     <properties>
         <spring.cloud-version>Hoxton.SR3</spring.cloud-version>
-        <springcloud.version>2.2.0.RELEASE</springcloud.version>
+        <springcloud.version>2.5.12</springcloud.version>
     </properties>
 
     <dependencyManagement>
